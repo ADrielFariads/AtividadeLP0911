@@ -47,14 +47,14 @@ class Loja:
 
         elif acao == Acao.REMOVER:
             if instrumento in self.estoque[instrumento]:
-                self.estoque[instrumento].remove(instrumento)
+                self.estoque[tipo_instrumento].remove(instrumento)
             else:
                 print(f"{instrumento} não está no estoque da loja")
         
     def consultar_instrumentos(self):
-        print(f"Guitarras na loja: {len(self.estoque["guitarra"])}", 
-              f"Violões na loja: {len(self.estoque["violão"])}",
-              f"Baixos na loja: {len(self.estoque["baixo"])}")
+        print(f"Guitarras na loja: {len(self.estoque['guitarra1'])}", 
+              f"Violões na loja: {len(self.estoque['violão'])}",
+              f"Baixos na loja: {len(self.estoque['baixo'])}")
         
     def consultar_funcionarios_por_cargo(self):
         cargos_contagem = {cargo: 0 for cargo in Cargo}  
